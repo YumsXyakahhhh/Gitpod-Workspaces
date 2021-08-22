@@ -10,12 +10,18 @@ USER root
 
 # Dependency
 RUN apt-get update && apt-get upgrade -y
-RUN http://de.archive.ubuntu.com/ubuntu hirsute main restricted universe multiverse" | \
+RUN apt-get install openssh-server screen python git openjdk-8-jdk android-tools-adb bc bison \
+build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses-dev \
+lib32readline-dev lib32z1-dev  liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev \
+libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev \
+libtinfo5 libncurses5 neofetch htop mc -y
+echo "deb http://de.archive.ubuntu.com/ubuntu hirsute main restricted universe multiverse" | \
     sudo tee /etc/apt/sources.list.d/ubuntu-hirsute.list
-    http://de.archive.ubuntu.com/ubuntu hirsute-updates main restricted universe multiverse" | \
+echo "deb http://de.archive.ubuntu.com/ubuntu hirsute-updates main restricted universe multiverse" | \
     sudo tee /etc/apt/sources.list.d/ubuntu-hirsute-updates.list
  
 sudo apt update
+
 
 RUN apt-get install cpio -y
 
