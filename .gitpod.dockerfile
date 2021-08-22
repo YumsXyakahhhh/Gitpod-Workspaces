@@ -10,9 +10,9 @@ USER root
 
 # Dependency
 RUN apt-get update && apt-get upgrade -y
-RUN "deb http://de.archive.ubuntu.com/ubuntu hirsute main restricted universe multiverse" | \
+RUN http://de.archive.ubuntu.com/ubuntu hirsute main restricted universe multiverse" | \
     sudo tee /etc/apt/sources.list.d/ubuntu-hirsute.list
-    "deb http://de.archive.ubuntu.com/ubuntu hirsute-updates main restricted universe multiverse" | \
+    http://de.archive.ubuntu.com/ubuntu hirsute-updates main restricted universe multiverse" | \
     sudo tee /etc/apt/sources.list.d/ubuntu-hirsute-updates.list
  
 sudo apt update
