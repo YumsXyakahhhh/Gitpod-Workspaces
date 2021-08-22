@@ -9,7 +9,7 @@ FROM gitpod/workspace-full:latest
 USER root
 
 # Dependency
-RUN RUN apt-get update && apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install openssh-server screen python git openjdk-8-jdk android-tools-adb bc bison \
 build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib64ncurses-dev \
 lib64readline-dev lib64z1-dev libc6-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev \
