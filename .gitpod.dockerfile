@@ -12,7 +12,7 @@ USER root
 RUN apt-get update && apt-get upgrade -y
 RUN echo "deb http://de.archive.ubuntu.com/ubuntu hirsute main restricted universe multiverse" | \
     sudo tee /etc/apt/sources.list.d/ubuntu-hirsute.list
-echo "deb http://de.archive.ubuntu.com/ubuntu hirsute-updates main restricted universe multiverse" | \
+    echo "deb http://de.archive.ubuntu.com/ubuntu hirsute-updates main restricted universe multiverse" | \
     sudo tee /etc/apt/sources.list.d/ubuntu-hirsute-updates.list
  
 sudo apt update
