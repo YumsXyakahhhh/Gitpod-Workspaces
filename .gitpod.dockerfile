@@ -9,13 +9,12 @@ FROM gitpod/workspace-full:latest
 USER root
 
 # Dependency
-RUN apt-get update
-RUN apt-get dist-upgrade -y
-RUN apt-get install apt-utils bc python python2 python3 make build-essential wget curl fish neofetch libncurses5-dev libncursesw5-dev -y
-RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
-USER gitpod
-ENV ARCH=arm64
-ENV SUBARCH=arm64
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install openssh-server screen python git openjdk-8-jdk android-tools-adb bc bison \
+build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses-dev \
+lib32readline-dev lib32z1-dev libc6-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev \
+libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev \
+libtinfo5 libncurses5 neofetch htop mc -y
 RUN apt-get install cpio -y
 
 
