@@ -16,6 +16,7 @@ lib32readline-dev lib32z1-dev libc6-dev liblz4-tool libncurses5-dev libsdl1.2-de
 libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev \
 libtinfo5 libncurses5 neofetch htop mc -y
 RUN apt-get install cpio -y
+RUN apt-get install xz-utils -y
 
 
 # End
